@@ -80,3 +80,12 @@ select,.counter input,.quantity-value>span,.card-body>span,.selection-info>p,.se
 .advanced-bottom .country-dropdown{margin-top:8px}
 
 .selection-summary{display:flex;flex-direction:column;align-items:stretch;gap:12px}.selection-summary .selection-label{margin:0;padding:8px 12px 4px;font-family:Mulish,sans-serif;font-size:14px;line-height:18px;font-weight:700;letter-spacing:-.42px;text-transform:uppercase;color:var(--muted)}.selection-summary .selection-info{padding:0 12px}
+
+/* Single, high-resolution STUDIO photographs; no enlarged atlas cells. */
+.photo>.studio-image{position:static;inset:auto;display:block;width:100%;height:100%;max-width:100%;object-fit:contain}
+.preview-stage{display:grid;place-items:center;aspect-ratio:3/2;background:#eceff3}
+.preview-stage>.studio-image,.preview-stage>.studio-core-preview{display:block;width:100%;height:auto;aspect-ratio:3/2;padding:0;object-fit:contain}
+
+
+.studio-image,.studio-core-preview{transform:rotate(-2.7deg)}
+.studio-image,.studio-core-preview{filter:drop-shadow(0 3px 3px rgba(31,43,54,.13))}

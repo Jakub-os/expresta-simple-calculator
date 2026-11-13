@@ -1,22 +1,24 @@
-let previewIndex=0,previewSide='front';
-const previewDesigns=['STUDIO / Minimal','BOTANICA / Organické','FORMA / Geometrické'];
-// Crop bitmap variant sheets and scale uniformly to preserve the photographed card proportions.
-function cardPreview(s,index=0,side='front',uid='main'){
- const name=['studio','botanica','forma'][index],row=s.round?1:0;
+let previewSide='front';
+const studioMaterials=['classic','matte','gloss','natural','spot','thick'];
+function studioAsset(s,side='front'){
  const foil=s.foil!=='none'&&(s.side==='both'||s.side===side)&&![3,5].includes(s.preset);
  const blank=side==='back'&&s.print==='Jednostranná tlač'&&!foil;
- let file=`${name}-${side}`,col=foil?(s.foil==='gold'?1:2):0;
- if(side==='front'&&!foil&&[2,3,4].includes(s.preset)){file=`${name}-materials`;col=s.preset-2}
- if(blank){file='blank';col=s.preset===3?1:s.preset===2?2:0}
- const core=colors.find(c=>c[0]===s.core)?.[1]||'#bd4145',thick=s.preset===5;
- const title=`${previewDesigns[index]}, ${side==='front'?'predná':'zadná'} strana, ${s.round?'zaoblené':'rovné'} rohy${foil?', '+(s.foil==='gold'?'zlatá':'strieborná')+' fólia':''}${thick?', jadro '+s.core:''}`;
- const raster=`<image href="assets/photos/${file}.png" x="${-col*512}" y="${-row*512}" width="1536" height="1024"/>`;
- const layer=(dy,filter='')=>`<g transform="translate(0 ${dy})"${filter?` filter="url(#${uid}-${filter})"`:''}><g clip-path="url(#${uid}-cell)">${raster}</g></g>`;
- const natural=side==='back'&&s.preset===3&&!blank;
- return `<svg class="bitmap-preview" viewBox="0 0 800 500" role="img" aria-label="${title}" xmlns="http://www.w3.org/2000/svg"><defs><clipPath id="${uid}-cell"><rect width="512" height="512"/></clipPath><filter id="${uid}-core" x="-10%" y="-10%" width="120%" height="130%"><feComponentTransfer in="SourceAlpha" result="coreMask"><feFuncA type="discrete" tableValues="0 0 0 0 0 0 0 1"/></feComponentTransfer><feFlood flood-color="${core}"/><feComposite operator="in" in2="coreMask"/></filter><filter id="${uid}-white"><feColorMatrix type="matrix" values="0 0 0 0 .9 0 0 0 0 .89 0 0 0 0 .86 0 0 0 1 0"/></filter><filter id="${uid}-natural"><feColorMatrix type="matrix" values="1 0 0 0 .01 0 .95 0 0 0 0 0 .82 0 0 0 0 0 1 0"/></filter></defs><g transform="translate(400 250) rotate(-3.15) scale(1.1) translate(-256 -256)">${thick?layer(11,'white')+layer(8,'core')+layer(3,'white'):''}${layer(0,natural?'natural':'')}</g></svg>`;
+ let material=studioMaterials[s.preset];
+ if(blank)material=s.preset===5?'thick-blank':s.preset===3?'natural-blank':s.preset===2?'gloss-blank':'blank';
+ else if(foil)material=s.foil;
+ else if(side==='back'&&![2,3,5].includes(s.preset))material='matte';
+ return {key:`${material}-${side}-${s.round?'round':'square'}`,blank};
 }
-function previewCarousel(){return `<section class="preview-carousel" aria-label="Náhľady vybraného prevedenia" aria-roledescription="carousel"><div class="preview-stage"><button class="back preview-back" data-action="back"><span aria-hidden="true"><img src="assets/redesign/imgBackChevron.svg" alt=""></span>Späť na všetky prevedenia</button>${cardPreview(state,previewIndex,previewSide)}<div class="preview-side-toggle" aria-label="Strana vizitky"><button class="preview-side ${previewSide==='front'?'active':''}" data-preview-side="front" aria-pressed="${previewSide==='front'}">Predná</button><button class="preview-side ${previewSide==='back'?'active':''}" data-preview-side="back" aria-pressed="${previewSide==='back'}">Zadná</button></div><button class="preview-arrow prev" data-preview-move="-1" aria-label="Predchádzajúca grafika">‹</button><button class="preview-arrow next" data-preview-move="1" aria-label="Nasledujúca grafika">›</button></div><p class="preview-note">Fotorealistická ilustrácia materiálu a úprav. Vlastnú grafiku pridáte v ďalšom kroku.</p></section>`}
-
-document.addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;if(b.dataset.previewMove){previewIndex=(previewIndex+Number(b.dataset.previewMove)+3)%3;render();document.querySelector(`[data-preview-move="${b.dataset.previewMove}"]`)?.focus()}else if(b.dataset.previewIndex!==undefined){previewIndex=Number(b.dataset.previewIndex);render();document.querySelector(`[data-preview-index="${previewIndex}"]`)?.focus()}else if(b.dataset.previewSide){previewSide=b.dataset.previewSide;render();document.querySelector(`[data-preview-side="${previewSide}"]`)?.focus()}});
-document.addEventListener('keydown',e=>{if(!e.target.closest('.preview-carousel')||!['ArrowLeft','ArrowRight'].includes(e.key))return;e.preventDefault();previewIndex=(previewIndex+(e.key==='ArrowRight'?1:2))%3;render();document.querySelector(`[data-preview-move="${e.key==='ArrowRight'?1:-1}"]`)?.focus()});
-let previewTouchX=null;document.addEventListener('touchstart',e=>{if(e.target.closest('.preview-stage'))previewTouchX=e.touches[0].clientX},{passive:true});document.addEventListener('touchend',e=>{if(previewTouchX===null)return;const delta=e.changedTouches[0].clientX-previewTouchX;previewTouchX=null;if(Math.abs(delta)>50){previewIndex=(previewIndex+(delta<0?1:2))%3;render()}},{passive:true});
+function studioImage(s,side='front',uid='preview',thumbnail=false){
+ const {key,blank}=studioAsset(s,side),src=`assets/studio/${key}.webp`;
+ const foil=s.foil!=='none'&&(s.side==='both'||s.side===side)&&![3,5].includes(s.preset);
+ const alt=`STUDIO — ${presets[s.preset][0]}, ${side==='front'?'predná':'zadná'} strana, ${s.round?'zaoblené':'rovné'} rohy${foil?', '+(s.foil==='gold'?'zlatá':'strieborná')+' fólia':''}${s.preset===5?', jadro '+s.core:''}${blank?', bez potlače':''}`;
+ if(s.preset===5&&s.core!=='Červená'){
+  const color=colors.find(([name])=>name===s.core)?.[1]||'#bd4145';
+  return `<svg class="studio-core-preview" viewBox="0 0 1536 1024" preserveAspectRatio="xMidYMid meet" role="img" aria-label="${esc(alt)}" xmlns="http://www.w3.org/2000/svg"><defs><filter id="${uid}-core-color" color-interpolation-filters="sRGB"><feColorMatrix in="SourceGraphic" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 4 -4 0 0 -.4" result="red-key"/><feComposite in="red-key" in2="SourceGraphic" operator="in" result="core-mask"/><feFlood flood-color="${color}" result="core-color"/><feComposite in="core-color" in2="core-mask" operator="in" result="colored-core"/><feComposite in="colored-core" in2="SourceGraphic" operator="over"/></filter></defs><image href="${src}" width="1536" height="1024" filter="url(#${uid}-core-color)"/></svg>`;
+ }
+ return `<img class="studio-image" src="${thumbnail?`assets/studio/${key}-thumb.webp`:src}" width="1536" height="1024" alt="${esc(alt)}" loading="${thumbnail?'lazy':'eager'}" decoding="async">`;
+}
+function previewCarousel(){return `<section class="preview-carousel" aria-label="Fotografický náhľad vizitky STUDIO"><div class="preview-stage"><button class="back preview-back" data-action="back"><span aria-hidden="true"><img src="assets/redesign/imgBackChevron.svg" alt=""></span>Späť na všetky prevedenia</button>${studioImage(state,previewSide)}<div class="preview-side-toggle" aria-label="Strana vizitky"><button class="preview-side ${previewSide==='front'?'active':''}" data-preview-side="front" aria-pressed="${previewSide==='front'}">Predná</button><button class="preview-side ${previewSide==='back'?'active':''}" data-preview-side="back" aria-pressed="${previewSide==='back'}">Zadná</button></div></div><p class="preview-note">Fotorealistická ilustrácia materiálu a úprav. Vlastnú grafiku pridáte v ďalšom kroku.</p></section>`}
+document.addEventListener('click',e=>{const button=e.target.closest('[data-preview-side]');if(!button)return;previewSide=button.dataset.previewSide;render();document.querySelector(`[data-preview-side="${previewSide}"]`)?.focus({preventScroll:true})});
+document.addEventListener('keydown',e=>{if(!e.target.closest('.preview-side-toggle')||!['ArrowLeft','ArrowRight'].includes(e.key))return;e.preventDefault();previewSide=previewSide==='front'?'back':'front';render();document.querySelector(`[data-preview-side="${previewSide}"]`)?.focus({preventScroll:true})});

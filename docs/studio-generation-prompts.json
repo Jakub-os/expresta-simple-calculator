@@ -1,0 +1,223 @@
+{
+  "method": "Built-in image_gen tool; WebP packaging only afterwards",
+  "masterPrompt": "Use case: product-mockup. Create a NEW ultra-photorealistic high-resolution commercial studio product photograph, a SINGLE business card, not an atlas, not a collage. Input reference is an old low-quality 3x2 variant sheet: use only its TOP LEFT business card as camera and brand reference. Upgrade photography substantially, don't upscale/reuse the low-res pixels. Same shallow elevated camera, card lies flat, long edges slope upward to the right about 16 degrees; front long edge and right short edge visible. Landscape canvas, ideally 2048x1360. Card centered, fully visible, fills 78% of canvas width with generous background around every corner; identical framing will be reused for all material variations. A physically credible 85x55mm business card, thin 350gsm crisp white stock, sharp square corners, subtle paper thickness, smooth plain paper, matte BLACK ink. Front graphic exact text: large spaced uppercase \"STUDIO\", underneath very small spaced uppercase \"BRAND & DESIGN\", centered. No other text. Beautiful authentic print product photography: optically sharp print, fine natural cellulose microtexture with subtle variation (not noise), tactile paper cut edges, soft contact shadow, realistic physically based daylight from upper left, no fake bevel, no painterly/CGI/vector appearance, no blur on any card edge. Backdrop a seamless uniform cool pale gray exact #ECEFF3; no horizon, gradient, props, extra cards, labels, borders or UI. Keep orientation of reference, do not flatten or distort aspect ratio. One ordinary classic white business card only.",
+  "backgroundExtraction": "Remove only background, preserve full card, camera, text and translucent contact shadow; true transparent RGBA.",
+  "assets": [
+    {
+      "file": "classic-front-square.webp",
+      "width": 1536,
+      "height": 1024,
+      "prompt": "Background extraction of new STUDIO master; preserve camera, graphic, texture and foreground."
+    },
+    {
+      "file": "matte-front-square.webp",
+      "width": 1536,
+      "height": 1024,
+      "prompt": "Use case: precise-object-edit / product-mockup. Use the supplied NEW high-resolution single STUDIO card photograph as edit target. LOCK camera, perspective, tilt, four corner positions, framing, scale, soft upper-left illumination, logo placement, exact typography and all proportions. Same 1536x1024 landscape canvas. One business card only, no atlas, collage, props or UI. Exact text is STUDIO and BRAND & DESIGN. Retain exceptional photographic sharpness and realistic cut edges. Return true transparent RGBA background with a subtle translucent dark contact shadow, so CSS #ECEFF3 shows through. No white halo or drawn checkerboard. Change only the physical material as specified next.\nMaterial: Smooth elegant MATTE LAMINATED white stock, black ink STUDIO. Very fine restrained paper grain, velvety silky uniform matte coating, no gloss, no glare, no creases, no embossed/crumpled surface. Sharp SQUARE corners. Thin stock."
+    },
+    {
+      "file": "gloss-front-square.webp",
+      "width": 1536,
+      "height": 1024,
+      "prompt": "Use case: precise-object-edit / product-mockup. Use the supplied NEW high-resolution single STUDIO card photograph as edit target. LOCK camera, perspective, tilt, four corner positions, framing, scale, soft upper-left illumination, logo placement, exact typography and all proportions. Same 1536x1024 landscape canvas. One business card only, no atlas, collage, props or UI. Exact text is STUDIO and BRAND & DESIGN. Retain exceptional photographic sharpness and realistic cut edges. Return true transparent RGBA background with a subtle translucent dark contact shadow, so CSS #ECEFF3 shows through. No white halo or drawn checkerboard. Change only the physical material as specified next.\nMaterial: High GLOSS laminated WHITE stock with black ink STUDIO. Clearly realistic broad softbox reflection sweeping diagonally across the upper-right surface, shiny smooth laminate, the print remains sharp and legible. Restrained reflections, no wrinkles, no plastic bevel or raised logo. Sharp SQUARE corners. Thin stock."
+    },
+    {
+      "file": "natural-front-square.webp",
+      "width": 1536,
+      "height": 1024,
+      "prompt": "Use case: precise-object-edit / product-mockup. Use the supplied NEW high-resolution single STUDIO card photograph as edit target. LOCK camera, perspective, tilt, four corner positions, framing, scale, soft upper-left illumination, logo placement, exact typography and all proportions. Same 1536x1024 landscape canvas. One business card only, no atlas, collage, props or UI. Exact text is STUDIO and BRAND & DESIGN. Retain exceptional photographic sharpness and realistic cut edges. Return true transparent RGBA background with a subtle translucent dark contact shadow, so CSS #ECEFF3 shows through. No white halo or drawn checkerboard. Change only the physical material as specified next.\nMaterial: Premium NATURAL UNCOATED warm ivory cotton paper, visible convincing tactile cellulose fibres, gently irregular organic microtexture. Black ink STUDIO absorbed naturally into paper. No brown kraft, no dirt or creases. Sharp SQUARE corners. Thin stock."
+    },
+    {
+      "file": "gold-front-square.webp",
+      "width": 1536,
+      "height": 1024,
+      "prompt": "Use case: precise-object-edit / product-mockup. Use the supplied NEW high-resolution single STUDIO card photograph as edit target. LOCK camera, perspective, tilt, four corner positions, framing, scale, soft upper-left illumination, logo placement, exact typography and all proportions. Same 1536x1024 landscape canvas. One business card only, no atlas, collage, props or UI. Exact text is STUDIO and BRAND & DESIGN. Retain exceptional photographic sharpness and realistic cut edges. Return true transparent RGBA background with a subtle translucent dark contact shadow, so CSS #ECEFF3 shows through. No white halo or drawn checkerboard. Change only the physical material as specified next.\nMaterial: Smooth white MATTE stock. Change only the large STUDIO letters to real hot-stamped GOLD FOIL: reflective metallic gold with nuanced natural highlight rolloff and tiny foil microvariation, perfectly flat and flush in the paper (no raised/beveled metal letters). BRAND & DESIGN stays black ink. Square corners."
+    },
+    {
+      "file": "silver-front-square.webp",
+      "width": 1536,
+      "height": 1024,
+      "prompt": "Use case: precise-object-edit / product-mockup. Use the supplied NEW high-resolution single STUDIO card photograph as edit target. LOCK camera, perspective, tilt, four corner positions, framing, scale, soft upper-left illumination, logo placement, exact typography and all proportions. Same 1536x1024 landscape canvas. One business card only, no atlas, collage, props or UI. Exact text is STUDIO and BRAND & DESIGN. Retain exceptional photographic sharpness and realistic cut edges. Return true transparent RGBA background with a subtle translucent dark contact shadow, so CSS #ECEFF3 shows through. No white halo or drawn checkerboard. Change only the physical material as specified next.\nMaterial: Smooth white MATTE stock. Change only the large STUDIO letters to real hot-stamped SILVER FOIL: reflective neutral silver with nuanced natural highlight rolloff, legible against white stock, perfectly flat and flush in the paper (no raised/beveled metal letters). BRAND & DESIGN stays black ink. Square corners."
+    },
+    {
+      "file": "thick-front-square.webp",
+      "width": 1536,
+      "height": 1024,
+      "prompt": "Use case: precise-object-edit / product-mockup. Use the supplied NEW high-resolution single STUDIO card photograph as edit target. LOCK camera, perspective, tilt, four corner positions, framing, scale, soft upper-left illumination, logo placement, exact typography and all proportions. Same 1536x1024 landscape canvas. One business card only, no atlas, collage, props or UI. Exact text is STUDIO and BRAND & DESIGN. Retain exceptional photographic sharpness and realistic cut edges. Return true transparent RGBA background with a subtle translucent dark contact shadow, so CSS #ECEFF3 shows through. No white halo or drawn checkerboard. Change only the physical material as specified next.\nMaterial: EXTRA THICK sandwich business card, white face and back plies, thin RED colored paper core visible naturally along front and right cut edge. Total thickness about 1.1mm relative to 85x55mm card: visibly sturdy but NOT a thick slab. Fine smooth white matte face and black STUDIO print. Preserve exact face shape, position and camera; thickness grows only below it. Square corners."
+    },
+    {
+      "file": "spot-front-square.webp",
+      "width": 1536,
+      "height": 1024,
+      "prompt": "Use case: precise-object-edit / product-mockup. Use the supplied NEW high-resolution single STUDIO card photograph as edit target. LOCK camera, perspective, tilt, four corner positions, framing, scale, soft upper-left illumination, logo placement, exact typography and all proportions. Same 1536x1024 landscape canvas. One business card only, no atlas, collage, props or UI. Exact text is STUDIO and BRAND & DESIGN. Retain exceptional photographic sharpness and realistic cut edges. Return true transparent RGBA background with a subtle translucent dark contact shadow, so CSS #ECEFF3 shows through. No white halo or drawn checkerboard. Change only the physical material as specified next.\nMaterial: White matte card with FLAT selective gloss varnish on black ink STUDIO ONLY. The black print stays FLAT, sharply printed on the paper, no embossing, no raised letters, no beveled edges, no sculptural bubble lettering. A thin clear coat gives a delicate narrow photographic specular glint across portions of black lettering, like real 25-micron spot UV varnish. Surrounding paper and BRAND & DESIGN stay matte. Square corners."
+    },
+    {
+      "file": "classic-front-round.webp",
+      "width": 1536,
+      "height": 1024,
+      "prompt": "Use case: precise-object-edit. The supplied image is an edit target: a high-resolution STUDIO business card product photograph. Change ONLY its four physical square corners to gently ROUNDED corners, radius 3 mm on an 85x55mm business card. The corners must be actually rounded paper with realistic rounded cut edges, not a rounded rectangular image mask. Keep the camera, exact card position, scale, tilt, perspective, material, all logo letters, foil/varnish details, lighting and photograph otherwise unchanged. Same 1536x1024 landscape canvas, true transparent background and soft translucent contact shadow, no white halo, no collage, no new text. Preserve any colored sandwich core following the rounded edge. Do not rotate, resize or crop the card."
+    },
+    {
+      "file": "matte-front-round.webp",
+      "width": 1536,
+      "height": 1024,
+      "prompt": "Use case: precise-object-edit. The supplied image is an edit target: a high-resolution STUDIO business card product photograph. Change ONLY its four physical square corners to gently ROUNDED corners, radius 3 mm on an 85x55mm business card. The corners must be actually rounded paper with realistic rounded cut edges, not a rounded rectangular image mask. Keep the camera, exact card position, scale, tilt, perspective, material, all logo letters, foil/varnish details, lighting and photograph otherwise unchanged. Same 1536x1024 landscape canvas, true transparent background and soft translucent contact shadow, no white halo, no collage, no new text. Preserve any colored sandwich core following the rounded edge. Do not rotate, resize or crop the card."
+    },
+    {
+      "file": "gloss-front-round.webp",
+      "width": 1536,
+      "height": 1024,
+      "prompt": "Use case: precise-object-edit. The supplied image is an edit target: a high-resolution STUDIO business card product photograph. Change ONLY its four physical square corners to gently ROUNDED corners, radius 3 mm on an 85x55mm business card. The corners must be actually rounded paper with realistic rounded cut edges, not a rounded rectangular image mask. Keep the camera, exact card position, scale, tilt, perspective, material, all logo letters, foil/varnish details, lighting and photograph otherwise unchanged. Same 1536x1024 landscape canvas, true transparent background and soft translucent contact shadow, no white halo, no collage, no new text. Preserve any colored sandwich core following the rounded edge. Do not rotate, resize or crop the card."
+    },
+    {
+      "file": "natural-front-round.webp",
+      "width": 1536,
+      "height": 1024,
+      "prompt": "Use case: precise-object-edit. The supplied image is an edit target: a high-resolution STUDIO business card product photograph. Change ONLY its four physical square corners to gently ROUNDED corners, radius 3 mm on an 85x55mm business card. The corners must be actually rounded paper with realistic rounded cut edges, not a rounded rectangular image mask. Keep the camera, exact card position, scale, tilt, perspective, material, all logo letters, foil/varnish details, lighting and photograph otherwise unchanged. Same 1536x1024 landscape canvas, true transparent background and soft translucent contact shadow, no white halo, no collage, no new text. Preserve any colored sandwich core following the rounded edge. Do not rotate, resize or crop the card.\nCleanup: Background-extraction: preserve exact foreground, camera, typography, material and corners; remove dark halo outside card; true transparent cutout with no external shadow, glow, noise or fringe. Same 1536x1024 framing."
+    },
+    {
+      "file": "gold-front-round.webp",
+      "width": 1536,
+      "height": 1024,
+      "prompt": "Use case: precise-object-edit. The supplied image is an edit target: a high-resolution STUDIO business card product photograph. Change ONLY its four physical square corners to gently ROUNDED corners, radius 3 mm on an 85x55mm business card. The corners must be actually rounded paper with realistic rounded cut edges, not a rounded rectangular image mask. Keep the camera, exact card position, scale, tilt, perspective, material, all logo letters, foil/varnish details, lighting and photograph otherwise unchanged. Same 1536x1024 landscape canvas, true transparent background and soft translucent contact shadow, no white halo, no collage, no new text. Preserve any colored sandwich core following the rounded edge. Do not rotate, resize or crop the card.\nCleanup: Background-extraction: preserve exact foreground, camera, typography, material and corners; remove dark halo outside card; true transparent cutout with no external shadow, glow, noise or fringe. Same 1536x1024 framing."
+    },
+    {
+      "file": "silver-front-round.webp",
+      "width": 1536,
+      "height": 1024,
+      "prompt": "Use case: precise-object-edit. The supplied image is an edit target: a high-resolution STUDIO business card product photograph. Change ONLY its four physical square corners to gently ROUNDED corners, radius 3 mm on an 85x55mm business card. The corners must be actually rounded paper with realistic rounded cut edges, not a rounded rectangular image mask. Keep the camera, exact card position, scale, tilt, perspective, material, all logo letters, foil/varnish details, lighting and photograph otherwise unchanged. Same 1536x1024 landscape canvas, true transparent background and soft translucent contact shadow, no white halo, no collage, no new text. Preserve any colored sandwich core following the rounded edge. Do not rotate, resize or crop the card."
+    },
+    {
+      "file": "spot-front-round.webp",
+      "width": 1536,
+      "height": 1024,
+      "prompt": "Use case: precise-object-edit. The supplied image is an edit target: a high-resolution STUDIO business card product photograph. Change ONLY its four physical square corners to gently ROUNDED corners, radius 3 mm on an 85x55mm business card. The corners must be actually rounded paper with realistic rounded cut edges, not a rounded rectangular image mask. Keep the camera, exact card position, scale, tilt, perspective, material, all logo letters, foil/varnish details, lighting and photograph otherwise unchanged. Same 1536x1024 landscape canvas, true transparent background and soft translucent contact shadow, no white halo, no collage, no new text. Preserve any colored sandwich core following the rounded edge. Do not rotate, resize or crop the card."
+    },
+    {
+      "file": "matte-back-square.webp",
+      "width": 1536,
+      "height": 1024,
+      "prompt": "Use case: precise-object-edit / product-mockup. Input photo is the physical edit target. Keep the exact card outline, corners, camera, tilt, position, perspective, scale, material, lighting and cut edges absolutely fixed. Same 1536x1024 landscape canvas. Replace only the printed front artwork with the reverse side of the SAME STUDIO business card, shown lying at exactly the same angle (do not mirror or turn the camera). Simple refined left-aligned contact layout printed flat on the paper. Text verbatim: bold name \"Alex Morgan\"; next line \"Design director\"; a thin horizontal rule; then three lines \"hello@example.com\", \"+421 900 123 456\", \"www.example.com\". All text aligned to the card perspective with generous margins, optically sharp and professionally typeset. No STUDIO logo on this reverse face. Finish: plain black ink. True transparent RGBA background, subtle natural translucent dark contact shadow, no white halo or checkerboard. No extra cards, props, labels, UI or unrelated text.\nCleanup: Background-extraction: preserve exact foreground, camera, typography, material and corners; remove dark halo outside card; true transparent cutout with no external shadow, glow, noise or fringe. Same 1536x1024 framing."
+    },
+    {
+      "file": "gold-back-square.webp",
+      "width": 1536,
+      "height": 1024,
+      "prompt": "Use case: precise-object-edit / product-mockup. Input photo is the physical edit target. Keep the exact card outline, corners, camera, tilt, position, perspective, scale, material, lighting and cut edges absolutely fixed. Same 1536x1024 landscape canvas. Replace only the printed front artwork with the reverse side of the SAME STUDIO business card, shown lying at exactly the same angle (do not mirror or turn the camera). Simple refined left-aligned contact layout printed flat on the paper. Text verbatim: bold name \"Alex Morgan\"; next line \"Design director\"; a thin horizontal rule; then three lines \"hello@example.com\", \"+421 900 123 456\", \"www.example.com\". All text aligned to the card perspective with generous margins, optically sharp and professionally typeset. No STUDIO logo on this reverse face. Finish: Alex Morgan name in gold foil; every other text and line in black ink. True transparent RGBA background, subtle natural translucent dark contact shadow, no white halo or checkerboard. No extra cards, props, labels, UI or unrelated text.\nCleanup: Background-extraction: preserve exact foreground, camera, typography, material and corners; remove dark halo outside card; true transparent cutout with no external shadow, glow, noise or fringe. Same 1536x1024 framing."
+    },
+    {
+      "file": "silver-back-square.webp",
+      "width": 1536,
+      "height": 1024,
+      "prompt": "Use case: precise-object-edit / product-mockup. Input photo is the physical edit target. Keep the exact card outline, corners, camera, tilt, position, perspective, scale, material, lighting and cut edges absolutely fixed. Same 1536x1024 landscape canvas. Replace only the printed front artwork with the reverse side of the SAME STUDIO business card, shown lying at exactly the same angle (do not mirror or turn the camera). Simple refined left-aligned contact layout printed flat on the paper. Text verbatim: bold name \"Alex Morgan\"; next line \"Design director\"; a thin horizontal rule; then three lines \"hello@example.com\", \"+421 900 123 456\", \"www.example.com\". All text aligned to the card perspective with generous margins, optically sharp and professionally typeset. No STUDIO logo on this reverse face. Finish: Alex Morgan name in silver foil; every other text and line in black ink. True transparent RGBA background, subtle natural translucent dark contact shadow, no white halo or checkerboard. No extra cards, props, labels, UI or unrelated text.\nCleanup: Use case: background-extraction. Preserve the exact business card, all printed text, photographic paper texture, foil and colored core if present, all four corners, exact perspective, position and scale unchanged. Remove ONLY the ugly dark smoky/pixelated rectangular halo outside the card. Produce a perfectly clean professional product cutout on true transparent background. There must be NO shadow outside the card, no glow, no dark frame, no noise and no fringe. Keep foreground fully intact. Do not change typography or surface. Output same 1536x1024 framing."
+    },
+    {
+      "file": "natural-back-square.webp",
+      "width": 1536,
+      "height": 1024,
+      "prompt": "Use case: precise-object-edit / product-mockup. Input photo is the physical edit target. Keep the exact card outline, corners, camera, tilt, position, perspective, scale, material, lighting and cut edges absolutely fixed. Same 1536x1024 landscape canvas. Replace only the printed front artwork with the reverse side of the SAME STUDIO business card, shown lying at exactly the same angle (do not mirror or turn the camera). Simple refined left-aligned contact layout printed flat on the paper. Text verbatim: bold name \"Alex Morgan\"; next line \"Design director\"; a thin horizontal rule; then three lines \"hello@example.com\", \"+421 900 123 456\", \"www.example.com\". All text aligned to the card perspective with generous margins, optically sharp and professionally typeset. No STUDIO logo on this reverse face. Finish: plain black ink, preserve natural ivory fibrous paper. True transparent RGBA background, subtle natural translucent dark contact shadow, no white halo or checkerboard. No extra cards, props, labels, UI or unrelated text."
+    },
+    {
+      "file": "gloss-back-square.webp",
+      "width": 1536,
+      "height": 1024,
+      "prompt": "Use case: precise-object-edit / product-mockup. Input photo is the physical edit target. Keep the exact card outline, corners, camera, tilt, position, perspective, scale, material, lighting and cut edges absolutely fixed. Same 1536x1024 landscape canvas. Replace only the printed front artwork with the reverse side of the SAME STUDIO business card, shown lying at exactly the same angle (do not mirror or turn the camera). Simple refined left-aligned contact layout printed flat on the paper. Text verbatim: bold name \"Alex Morgan\"; next line \"Design director\"; a thin horizontal rule; then three lines \"hello@example.com\", \"+421 900 123 456\", \"www.example.com\". All text aligned to the card perspective with generous margins, optically sharp and professionally typeset. No STUDIO logo on this reverse face. Finish: plain black ink, preserve the glossy full-surface reflections. True transparent RGBA background, subtle natural translucent dark contact shadow, no white halo or checkerboard. No extra cards, props, labels, UI or unrelated text."
+    },
+    {
+      "file": "thick-back-square.webp",
+      "width": 1536,
+      "height": 1024,
+      "prompt": "Use case: precise-object-edit / product-mockup. Input photo is the physical edit target. Keep the exact card outline, corners, camera, tilt, position, perspective, scale, material, lighting and cut edges absolutely fixed. Same 1536x1024 landscape canvas. Replace only the printed front artwork with the reverse side of the SAME STUDIO business card, shown lying at exactly the same angle (do not mirror or turn the camera). Simple refined left-aligned contact layout printed flat on the paper. Text verbatim: bold name \"Alex Morgan\"; next line \"Design director\"; a thin horizontal rule; then three lines \"hello@example.com\", \"+421 900 123 456\", \"www.example.com\". All text aligned to the card perspective with generous margins, optically sharp and professionally typeset. No STUDIO logo on this reverse face. Finish: plain black ink, preserve white-red-white sandwich edge. True transparent RGBA background, subtle natural translucent dark contact shadow, no white halo or checkerboard. No extra cards, props, labels, UI or unrelated text.\nCleanup: Use case: background-extraction. Preserve the exact business card, all printed text, photographic paper texture, foil and colored core if present, all four corners, exact perspective, position and scale unchanged. Remove ONLY the ugly dark smoky/pixelated rectangular halo outside the card. Produce a perfectly clean professional product cutout on true transparent background. There must be NO shadow outside the card, no glow, no dark frame, no noise and no fringe. Keep foreground fully intact. Do not change typography or surface. Output same 1536x1024 framing."
+    },
+    {
+      "file": "blank-back-square.webp",
+      "width": 1536,
+      "height": 1024,
+      "prompt": "Use case: precise-object-edit / product-mockup. Input photo is the physical edit target. Keep the exact card outline, corners, camera, tilt, position, perspective, scale, material, lighting and cut edges absolutely fixed. Same 1536x1024 landscape canvas. Replace only the printed front artwork with the reverse side of the SAME STUDIO business card, shown lying at exactly the same angle (do not mirror or turn the camera). The face is completely BLANK with no marks. Finish: EMPTY unprinted reverse: remove ALL text and logos, pure blank white matte paper. True transparent RGBA background, subtle natural translucent dark contact shadow, no white halo or checkerboard. No extra cards, props, labels, UI or unrelated text.\nCleanup: Background-extraction: preserve exact foreground, camera, typography, material and corners; remove dark halo outside card; true transparent cutout with no external shadow, glow, noise or fringe. Same 1536x1024 framing."
+    },
+    {
+      "file": "thick-blank-back-square.webp",
+      "width": 1536,
+      "height": 1024,
+      "prompt": "Use case: precise-object-edit / product-mockup. Input photo is the physical edit target. Keep the exact card outline, corners, camera, tilt, position, perspective, scale, material, lighting and cut edges absolutely fixed. Same 1536x1024 landscape canvas. Replace only the printed front artwork with the reverse side of the SAME STUDIO business card, shown lying at exactly the same angle (do not mirror or turn the camera). The face is completely BLANK with no marks. Finish: EMPTY unprinted reverse: remove ALL text and logos, blank white face with the red sandwich core still visible. True transparent RGBA background, subtle natural translucent dark contact shadow, no white halo or checkerboard. No extra cards, props, labels, UI or unrelated text.\nCleanup: Use case: background-extraction. Preserve the exact business card, all printed text, photographic paper texture, foil and colored core if present, all four corners, exact perspective, position and scale unchanged. Remove ONLY the ugly dark smoky/pixelated rectangular halo outside the card. Produce a perfectly clean professional product cutout on true transparent background. There must be NO shadow outside the card, no glow, no dark frame, no noise and no fringe. Keep foreground fully intact. Do not change typography or surface. Output same 1536x1024 framing."
+    },
+    {
+      "file": "thick-front-round.webp",
+      "width": 1536,
+      "height": 1024,
+      "prompt": "Use case: precise-object-edit. Correct only the TOP-RIGHT physical corner of this business card photograph (the paper tip near image coordinate x1240,y105). It is still square and must be rounded to the same 3mm radius as the other three already rounded corners. Cut away the sharp paper point and continue the visible thin red sandwich core smoothly around the newly rounded top-right cut edge. Keep ALL remaining pixels, camera, card position, text, material, scale, colors, transparency and soft shadow unchanged. Same 1536x1024 canvas, real transparent background. One card; four consistently rounded corners.\nCleanup: Use case: background-extraction. Preserve the exact business card, all printed text, photographic paper texture, foil and colored core if present, all four corners, exact perspective, position and scale unchanged. Remove ONLY the ugly dark smoky/pixelated rectangular halo outside the card. Produce a perfectly clean professional product cutout on true transparent background. There must be NO shadow outside the card, no glow, no dark frame, no noise and no fringe. Keep foreground fully intact. Do not change typography or surface. Output same 1536x1024 framing."
+    },
+    {
+      "file": "natural-blank-back-square.webp",
+      "width": 1536,
+      "height": 1024,
+      "prompt": "Use case: precise-object-edit. Supplied image is the physical reference and edit target. Make the reverse of this exact STUDIO card completely BLANK, no ink, no text, no logo. Keep exact camera, card position, scale, angle, material, lighting, edges and shadow. Preserve the warm ivory fibrous natural paper texture. Corners stay crisp square. Same 1536x1024 landscape canvas. True transparent RGBA background, soft translucent dark contact shadow, no white halo or checkerboard. No props or extra objects."
+    },
+    {
+      "file": "natural-blank-back-round.webp",
+      "width": 1536,
+      "height": 1024,
+      "prompt": "Use case: precise-object-edit. Supplied image is the physical reference and edit target. Make the reverse of this exact STUDIO card completely BLANK, no ink, no text, no logo. Keep exact camera, card position, scale, angle, material, lighting, edges and shadow. Preserve the warm ivory fibrous natural paper texture. Corners gently rounded, physical 3mm corner radius. Same 1536x1024 landscape canvas. True transparent RGBA background, soft translucent dark contact shadow, no white halo or checkerboard. No props or extra objects."
+    },
+    {
+      "file": "gloss-blank-back-square.webp",
+      "width": 1536,
+      "height": 1024,
+      "prompt": "Use case: precise-object-edit. Supplied image is the physical reference and edit target. Make the reverse of this exact STUDIO card completely BLANK, no ink, no text, no logo. Keep exact camera, card position, scale, angle, material, lighting, edges and shadow. Preserve the smooth full-surface glossy laminate and photographed softbox reflections. Corners stay crisp square. Same 1536x1024 landscape canvas. True transparent RGBA background, soft translucent dark contact shadow, no white halo or checkerboard. No props or extra objects."
+    },
+    {
+      "file": "gloss-blank-back-round.webp",
+      "width": 1536,
+      "height": 1024,
+      "prompt": "Use case: precise-object-edit. Supplied image is the physical reference and edit target. Make the reverse of this exact STUDIO card completely BLANK, no ink, no text, no logo. Keep exact camera, card position, scale, angle, material, lighting, edges and shadow. Preserve the smooth full-surface glossy laminate and photographed softbox reflections. Corners gently rounded, physical 3mm corner radius. Same 1536x1024 landscape canvas. True transparent RGBA background, soft translucent dark contact shadow, no white halo or checkerboard. No props or extra objects."
+    },
+    {
+      "file": "matte-back-round.webp",
+      "width": 1536,
+      "height": 1024,
+      "prompt": "Use case: precise-object-edit. Change ONLY the four physical corners of this business card photograph from square to rounded, 3mm corner radius on an 85x55mm card. Keep the entire rest of the supplied photograph fixed: exact card position, camera, tilt, shape, scale, lighting, physical material, red sandwich core if present, foil if present, all text and its typesetting. Same 1536x1024 landscape canvas. Return true transparent RGBA with clean antialiased edges and soft translucent contact shadow. The paper itself has gently rounded cut edges; do not apply a rounded image frame. Do not zoom, mirror, crop, add text or change the layout. Blank cards must remain completely blank.\nCleanup: Background-extraction: preserve exact foreground, camera, typography, material and corners; remove dark halo outside card; true transparent cutout with no external shadow, glow, noise or fringe. Same 1536x1024 framing."
+    },
+    {
+      "file": "gold-back-round.webp",
+      "width": 1536,
+      "height": 1024,
+      "prompt": "Use case: precise-object-edit. Change ONLY the four physical corners of this business card photograph from square to rounded, 3mm corner radius on an 85x55mm card. Keep the entire rest of the supplied photograph fixed: exact card position, camera, tilt, shape, scale, lighting, physical material, red sandwich core if present, foil if present, all text and its typesetting. Same 1536x1024 landscape canvas. Return true transparent RGBA with clean antialiased edges and soft translucent contact shadow. The paper itself has gently rounded cut edges; do not apply a rounded image frame. Do not zoom, mirror, crop, add text or change the layout. Blank cards must remain completely blank."
+    },
+    {
+      "file": "silver-back-round.webp",
+      "width": 1536,
+      "height": 1024,
+      "prompt": "Use case: precise-object-edit. Change ONLY the four physical corners of this business card photograph from square to rounded, 3mm corner radius on an 85x55mm card. Keep the entire rest of the supplied photograph fixed: exact card position, camera, tilt, shape, scale, lighting, physical material, red sandwich core if present, foil if present, all text and its typesetting. Same 1536x1024 landscape canvas. Return true transparent RGBA with clean antialiased edges and soft translucent contact shadow. The paper itself has gently rounded cut edges; do not apply a rounded image frame. Do not zoom, mirror, crop, add text or change the layout. Blank cards must remain completely blank."
+    },
+    {
+      "file": "natural-back-round.webp",
+      "width": 1536,
+      "height": 1024,
+      "prompt": "Use case: precise-object-edit. Change ONLY the four physical corners of this business card photograph from square to rounded, 3mm corner radius on an 85x55mm card. Keep the entire rest of the supplied photograph fixed: exact card position, camera, tilt, shape, scale, lighting, physical material, red sandwich core if present, foil if present, all text and its typesetting. Same 1536x1024 landscape canvas. Return true transparent RGBA with clean antialiased edges and soft translucent contact shadow. The paper itself has gently rounded cut edges; do not apply a rounded image frame. Do not zoom, mirror, crop, add text or change the layout. Blank cards must remain completely blank."
+    },
+    {
+      "file": "gloss-back-round.webp",
+      "width": 1536,
+      "height": 1024,
+      "prompt": "Use case: precise-object-edit. Change ONLY the four physical corners of this business card photograph from square to rounded, 3mm corner radius on an 85x55mm card. Keep the entire rest of the supplied photograph fixed: exact card position, camera, tilt, shape, scale, lighting, physical material, red sandwich core if present, foil if present, all text and its typesetting. Same 1536x1024 landscape canvas. Return true transparent RGBA with clean antialiased edges and soft translucent contact shadow. The paper itself has gently rounded cut edges; do not apply a rounded image frame. Do not zoom, mirror, crop, add text or change the layout. Blank cards must remain completely blank.\nCleanup: Background-extraction: preserve exact foreground, camera, typography, material and corners; remove dark halo outside card; true transparent cutout with no external shadow, glow, noise or fringe. Same 1536x1024 framing."
+    },
+    {
+      "file": "thick-back-round.webp",
+      "width": 1536,
+      "height": 1024,
+      "prompt": "Use case: precise-object-edit. Change ONLY the four physical corners of this business card photograph from square to rounded, 3mm corner radius on an 85x55mm card. Keep the entire rest of the supplied photograph fixed: exact card position, camera, tilt, shape, scale, lighting, physical material, red sandwich core if present, foil if present, all text and its typesetting. Same 1536x1024 landscape canvas. Return true transparent RGBA with clean antialiased edges and soft translucent contact shadow. The paper itself has gently rounded cut edges; do not apply a rounded image frame. Do not zoom, mirror, crop, add text or change the layout. Blank cards must remain completely blank."
+    },
+    {
+      "file": "blank-back-round.webp",
+      "width": 1536,
+      "height": 1024,
+      "prompt": "Use case: precise-object-edit. Change ONLY the four physical corners of this business card photograph from square to rounded, 3mm corner radius on an 85x55mm card. Keep the entire rest of the supplied photograph fixed: exact card position, camera, tilt, shape, scale, lighting, physical material, red sandwich core if present, foil if present, all text and its typesetting. Same 1536x1024 landscape canvas. Return true transparent RGBA with clean antialiased edges and soft translucent contact shadow. The paper itself has gently rounded cut edges; do not apply a rounded image frame. Do not zoom, mirror, crop, add text or change the layout. Blank cards must remain completely blank."
+    },
+    {
+      "file": "thick-blank-back-round.webp",
+      "width": 1536,
+      "height": 1024,
+      "prompt": "Use case: precise-object-edit. Change ONLY the four physical corners of this business card photograph from square to rounded, 3mm corner radius on an 85x55mm card. Keep the entire rest of the supplied photograph fixed: exact card position, camera, tilt, shape, scale, lighting, physical material, red sandwich core if present, foil if present, all text and its typesetting. Same 1536x1024 landscape canvas. Return true transparent RGBA with clean antialiased edges and soft translucent contact shadow. The paper itself has gently rounded cut edges; do not apply a rounded image frame. Do not zoom, mirror, crop, add text or change the layout. Blank cards must remain completely blank."
+    }
+  ]
+}

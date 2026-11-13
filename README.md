@@ -46,3 +46,7 @@ GitHub Pages poskytuje statický hosting. Produkčný výpočet a objednávky pr
 Aktuálne rozhranie vychádza zo sekcie Figma `358:4105`. Zahŕňa kompaktnú galériu, oddelené karty rekapitulácie, pill prepínače, nový veľký náhľad, doladenie a samostatný pokročilý formulár. Štýly nového rozhrania sú v `dist/redesign.css`, ikony v `dist/assets/redesign/`. Fotorealistické náhľady zostávajú na pozadí `#ECEFF3`.
 
 Ceny a doprava sú ukážkové. Nahrávanie grafiky a objednávka nie sú napojené na produkčné služby.
+
+## Fotorealistické náhľady STUDIO
+
+Aktuálny prototyp používa iba grafiku STUDIO. Nová sada samostatných bitmapových náhľadov, predná/zadná strana a varianty materiálov sú v `dist/assets/studio/`. Veľké obrázky majú 1536 × 1024 px a bezstratový WebP s transparentným pozadím; galéria načítava šesť optimalizovaných náhľadov 768 × 512 px. Pozadie zostáva `#ECEFF3`. Audit a postup sú v [docs/studio-image-audit.md](docs/studio-image-audit.md), generovacie prompty v [docs/studio-generation-prompts.json](docs/studio-generation-prompts.json).
