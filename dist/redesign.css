@@ -24,3 +24,11 @@ select{appearance:none;-webkit-appearance:none;background-image:url("assets/rede
 .price-values strong{display:block;font-size:32px;line-height:1;font-weight:700;letter-spacing:-.64px;color:var(--red);padding:4px 0;border-bottom:1px dashed var(--red);white-space:nowrap}
 .price-values small{display:block;font-size:16px;line-height:normal;font-weight:700;letter-spacing:-.16px;color:var(--red)}
 .summary-cta .upload-cta{height:48px;min-height:48px;flex-shrink:0}
+
+.preview-back{position:absolute;z-index:1;left:16px;top:16px;display:flex;align-items:center;justify-content:flex-start;gap:10px;width:284px;max-width:calc(100% - 32px);min-height:44px;margin:0;padding:8px 12px 8px 8px;background:var(--tint);border-radius:8px;font-size:16px;line-height:24px;font-weight:700;letter-spacing:-.16px;text-align:left;text-transform:uppercase}
+.preview-back>span{display:flex;align-items:center;justify-content:center;width:16px;height:28px;flex-shrink:0}.preview-back img{display:block;width:12px;height:8px;transform:rotate(90deg)}
+@media(max-width:1000px){.preview-stage .preview-side-toggle{top:76px}}
+@media(max-width:760px){.preview-back{left:12px;top:12px;max-width:calc(100% - 24px)}.preview-stage .preview-side-toggle{top:68px}}
+
+.preview-back{white-space:nowrap;height:44px}
+@media(max-width:360px){.preview-back{white-space:normal;height:auto}.preview-stage .preview-side-toggle{top:92px}}
