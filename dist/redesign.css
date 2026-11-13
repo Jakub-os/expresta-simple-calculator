@@ -89,3 +89,7 @@ select,.counter input,.quantity-value>span,.card-body>span,.selection-info>p,.se
 
 .studio-image,.studio-core-preview{transform:rotate(-2.7deg)}
 .studio-image,.studio-core-preview{filter:drop-shadow(0 3px 3px rgba(31,43,54,.13))}
+
+.preview-image-open{display:block;width:100%;padding:0;border:0;border-radius:0;background:transparent!important;cursor:zoom-in;overflow:visible}
+.preview-image-open>.studio-image,.preview-image-open>.studio-core-preview{display:block;width:100%;height:auto;aspect-ratio:3/2;padding:0;object-fit:contain}
+.card .photo{cursor:zoom-in}
