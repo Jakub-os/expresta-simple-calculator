@@ -78,3 +78,5 @@ select,.counter input,.quantity-value>span,.card-body>span,.selection-info>p,.se
 .country-menu [role="option"]{display:flex;align-items:center;justify-content:space-between;gap:12px;width:100%;min-height:44px;padding:10px 12px;border-radius:8px;background:white;color:var(--ink);font-size:16px;line-height:24px;font-weight:400;text-align:left}
 .country-menu [role="option"][aria-selected="true"]{background:var(--tint);font-weight:700}.country-menu [role="option"]:hover,.country-menu [role="option"]:focus{background:var(--tint)}.country-menu [role="option"]:focus-visible{outline:2px solid var(--ink);outline-offset:-2px}
 .advanced-bottom .country-dropdown{margin-top:8px}
+
+.selection-summary{display:flex;flex-direction:column;align-items:stretch;gap:12px}.selection-summary .selection-label{margin:0;padding:8px 12px 4px;font-family:Mulish,sans-serif;font-size:14px;line-height:18px;font-weight:700;letter-spacing:-.42px;text-transform:uppercase;color:var(--muted)}.selection-summary .selection-info{padding:0 12px}
