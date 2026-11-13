@@ -43,6 +43,6 @@ GitHub Pages poskytuje statický hosting. Produkčný výpočet a objednávky pr
 
 ## Dizajn – november 2026
 
-Aktuálne rozhranie vychádza zo sekcie Figma `358:4105`. Zahŕňa kompaktnú galériu, oddelené karty rekapitulácie, pill prepínače, nový veľký náhľad, doladenie a samostatný pokročilý formulár. Štýly nového rozhrania sú v `dist/redesign.css`, ikony v `dist/assets/redesign/`. Fotorealistické náhľady zostávajú na pozadí `#F9FAFB`.
+Aktuálne rozhranie vychádza zo sekcie Figma `358:4105`. Zahŕňa kompaktnú galériu, oddelené karty rekapitulácie, pill prepínače, nový veľký náhľad, doladenie a samostatný pokročilý formulár. Štýly nového rozhrania sú v `dist/redesign.css`, ikony v `dist/assets/redesign/`. Fotorealistické náhľady zostávajú na pozadí `#ECEFF3`.
 
 Ceny a doprava sú ukážkové. Nahrávanie grafiky a objednávka nie sú napojené na produkčné služby.

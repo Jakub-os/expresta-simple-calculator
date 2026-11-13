@@ -50,3 +50,11 @@ select,.counter input,.quantity-value>span,.card-body>span,.selection-info>p,.se
 .setting{scroll-margin-top:24px}
 
 .counter input{min-width:1ch;text-align:center;font-variant-numeric:tabular-nums}.quantity-value{justify-content:center}
+
+/* Bitmap previews keep their intrinsic proportions at every viewport size. */
+.photo,.preview-stage{background:#eceff3}
+.photo>svg{display:block;width:100%;height:100%;overflow:hidden}
+.card{container-type:inline-size}
+.card .photo{height:auto;aspect-ratio:4/3}
+.card .card-expand{top:calc(75cqw - 24px)}
+.preview-stage>svg{padding:0;width:100%;height:auto;aspect-ratio:8/5}
