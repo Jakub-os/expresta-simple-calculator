@@ -58,3 +58,14 @@ select,.counter input,.quantity-value>span,.card-body>span,.selection-info>p,.se
 .card .photo{height:auto;aspect-ratio:4/3}
 .card .card-expand{top:calc(75cqw - 24px)}
 .preview-stage>svg{padding:0;width:100%;height:auto;aspect-ratio:8/5}
+
+/* A raised card signals that the whole option can be selected. */
+.card{transition:transform 160ms ease,box-shadow 160ms ease}
+@media(hover:hover) and (pointer:fine){
+ .card:hover{transform:translateY(-4px);box-shadow:inset 0 0 0 1px #7d8b99,var(--e2)}
+ .card.selected:hover{box-shadow:inset 0 0 0 2px var(--ink),var(--e2)}
+ .card .card-expand:hover,.card .card-edit:hover{background-color:#dee3e8}
+}
+.card:focus-within{box-shadow:inset 0 0 0 1px #7d8b99,var(--e2)}
+.card.selected:focus-within{box-shadow:inset 0 0 0 2px var(--ink),var(--e2)}
+@media(prefers-reduced-motion:reduce){.card{transition:none}.card:hover{transform:none}}
