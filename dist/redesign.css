@@ -11,3 +11,5 @@ html:has(dialog[open]){overflow:hidden}.tick{font-size:0;background:transparent 
 .quick button,.speed b{font-weight:700}.quick small,.discount-badge{border-radius:999px}
 
 .delivery-link{gap:10px;padding:8px 12px 8px 8px;min-height:64px;overflow:hidden}.delivery-link .truck{box-shadow:var(--e1)}.delivery-link .truck img{width:16px;height:16px;display:block}.delivery-link>span:nth-child(2){min-width:0;line-height:24px;letter-spacing:-.16px}.delivery-chevron{display:flex;align-items:center;justify-content:center;width:16px;height:28px;flex-shrink:0}.delivery-chevron img{width:12px;height:8px;display:block;transform:rotate(-90deg)}
+
+select{appearance:none;-webkit-appearance:none;background-image:url("assets/redesign/imgSelectChevron.svg");background-repeat:no-repeat;background-position:right 16px center;background-size:12px 8px;padding-right:44px}select::-ms-expand{display:none}
