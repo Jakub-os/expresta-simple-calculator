@@ -40,3 +40,9 @@ Workflow publikuje iba obsah `dist/`. Všetky lokálne cesty sú relatívne, pre
 Ceny a prehľad dopravy sú ilustračné. Objednávka, nahrávanie súborov a produkčný backend nie sú napojené. Zvolené parametre sa ukladajú len v prehliadači cez localStorage. Písma sa načítavajú z Google Fonts; fotografie, logo a ikony sú súčasťou repozitára.
 
 GitHub Pages poskytuje statický hosting. Produkčný výpočet a objednávky preto bude potrebné napojiť na existujúce služby Expresta.
+
+## Dizajn – november 2026
+
+Aktuálne rozhranie vychádza zo sekcie Figma `358:4105`. Zahŕňa kompaktnú galériu, oddelené karty rekapitulácie, pill prepínače, nový veľký náhľad, doladenie a samostatný pokročilý formulár. Štýly nového rozhrania sú v `dist/redesign.css`, ikony v `dist/assets/redesign/`. Fotorealistické náhľady zostávajú na pozadí `#F9FAFB`.
+
+Ceny a doprava sú ukážkové. Nahrávanie grafiky a objednávka nie sú napojené na produkčné služby.

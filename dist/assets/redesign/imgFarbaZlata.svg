@@ -1,0 +1,12 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Farba / Zlat&#195;&#161;">
+<circle id="farba" cx="10" cy="10" r="9.72222" fill="url(#paint0_linear_0_172)" stroke-width="0.555556" stroke="#7D8B99"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear_0_172" x1="0" y1="10" x2="20" y2="10" gradientUnits="userSpaceOnUse">
+<stop stop-color="#B88A2B"/>
+<stop offset="0.5" stop-color="#F2D17A"/>
+<stop offset="1" stop-color="#A87A24"/>
+</linearGradient>
+</defs>
+</svg>
