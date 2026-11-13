@@ -38,3 +38,11 @@ select{appearance:none;-webkit-appearance:none;background-image:url("assets/rede
 .advanced-fields label,.advanced-bottom .field-label,.advanced-extra>span,.advanced-price>span{font-weight:700}
 select,.counter input,.quantity-value>span,.card-body>span,.selection-info>p,.selection-summary .parameter-grid,.speed small,.speeds p,.setting p,.preview-note,.material-options small,.advanced-extra b,.advanced-price small,.help,.mode-hint{font-weight:400}
 @media(max-width:760px){.selection-summary .parameter-grid{font-weight:700}}
+
+/* Selected-card actions use the original 16px Figma assets in 24px buttons. */
+.card.selected .card-body{padding-left:12px;padding-right:56px}
+.card .card-expand,.card .card-edit{position:absolute;z-index:1;display:flex;align-items:center;justify-content:center;width:24px;height:24px;padding:4px;border-radius:8px;opacity:1;font-size:16px;line-height:16px}
+.card .card-expand{top:80px;right:16px;background:var(--panel)}
+.card .card-edit{bottom:16px;right:16px;background:var(--tint)}
+.card .card-expand img,.card .card-edit img{display:block;width:16px;height:16px}
+@media(max-width:760px){.card.selected .card-body{padding-left:4px;padding-right:40px}.card .card-expand,.card .card-edit{right:12px}.card .card-expand:before,.card .card-edit:before{content:'';position:absolute;inset:-10px}}
